@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@theme {
+    --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'PT Sans', ui-sans-serif, system-ui, sans-serif;
+
+    --color-pale-blue: #f5f8fc;
+    --color-light-blue: #eaf2fb;
+    --color-dark-navy: #12243a;
+    --color-muted: #65758b;
+    --color-navy: #083b78;
+    --color-navy-deep: #052a56;
+    --color-gold: #d69c1a;
+    --color-gold-light: #f2c65a;
+    --color-amber-dark: #b37d0d;
+
+    --shadow-card: 0 20px 60px rgb(8 59 120 / 0.12);
+    --shadow-soft: 0 10px 26px rgb(8 59 120 / 0.08);
+
+    --animate-marquee: marquee 26s linear infinite;
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    --animate-fade-up: fade-up .7s ease-out both;
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(18px);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+        scroll-padding-top: 6rem;
+    }
+
+    body {
+        @apply bg-pale-blue font-sans font-medium text-dark-navy antialiased overflow-x-hidden;
+    }
+
+    ::selection {
+        @apply bg-gold-light text-navy-deep;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+}
+
+@utility btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[.95rem] font-bold transition hover:-translate-y-0.5;
+}
+
+@utility btn-fill {
+    @apply btn bg-gold text-navy-deep shadow-lg shadow-gold/30 hover:bg-gold-light;
+}
+
+@utility btn-line {
+    @apply btn border-[1.5px] border-white/55 text-white hover:border-white hover:bg-white/10;
+}
+
+@utility btn-ink {
+    @apply btn bg-navy text-white shadow-lg shadow-navy/30 hover:bg-navy-deep;
+}
