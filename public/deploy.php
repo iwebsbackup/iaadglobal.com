@@ -22,7 +22,7 @@ use Illuminate\Contracts\Console\Kernel;
 // ---------------------------------------------------------------------
 
 // Long random key. Change it if it was ever shared or logged.
-$secret = '064983066e22f87ec290cdb1345b57cf0542695d443dded0';
+$secret = 'RqKb9D571akARRFqSBI2';
 
 header('Content-Type: text/html; charset=UTF-8');
 header('Cache-Control: no-store');
