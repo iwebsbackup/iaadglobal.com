@@ -12,3 +12,8 @@
 - Added email sender on register and forget password logic
 - Designed the email sender
 - Updated the data with current brochure
+
+### 7 - 8 October 2026
+- Completed entire payment flow + payment gateway
+- added email sender with reciept pdf
+- added profile page
